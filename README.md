@@ -39,11 +39,12 @@ Nice-to-have
 
 🏗️ Arquitectura
 
-        Frontend: React / Next.js, TypeScript, Material UI.
+        Frontend: Next.js, TypeScript, Tailwind
 
-        Backend: Node.js (NestJS / Express) o Java Spring Boot.
+        Backend: Java Spring Boot.
 
-        Base de datos: PostgreSQL + Redis (cache).
+        Base de datos: PostgreSQL
+        
 
         Integraciones externas:
 
