@@ -88,10 +88,8 @@ public class RegistrationService {
 
     //reenvia el codigo de verificacion
     public void reenviarCodigoVerificacion(String email) throws MessagingException {
-        Optional<User> optionalUser = userRepository.findByEmail(email);
-
-        if (optionalUser.isPresent()) {
-            User user = optionalUser.get();
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(()->new UserNotFoundException(email));
 
             if (user.isEnabled()) {
                 throw new AccountAlreadyVerifiedException(email);
@@ -101,9 +99,6 @@ public class RegistrationService {
             enviarVerificacionEmail(user);
 
             userRepository.save(user);
-        } else {
-            throw new UserNotFoundException(email);
-        }
     }
 
     //envia el codigo de verificacion
