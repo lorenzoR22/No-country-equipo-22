@@ -1,0 +1,22 @@
+# Django simple
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.env
+db.sqlite3
+media/
+staticfiles/
+*.log
+local_settings.py
+.DS_Store
+.idea/
+.vscode/
+.coverage
+htmlcov/
+.mypy_cache/
+.pytest_cache/
