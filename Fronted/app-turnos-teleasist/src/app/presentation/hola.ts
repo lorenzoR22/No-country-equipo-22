@@ -1,1 +1,0 @@
-const first = (second) => { third }
