@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ContextProvider } from "@/context/Providers";
+import { ContextProvider } from "@/_context/Providers";
 
 
 
