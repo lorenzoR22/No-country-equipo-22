@@ -3,6 +3,7 @@ package com.example.auth_service.Config;
 import com.example.auth_service.Exceptions.Customs.UserNotFoundException;
 import com.example.auth_service.Repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -15,7 +16,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 @Configuration
 @RequiredArgsConstructor
 public class AppConfig {
-    private final UserRepository userRepository;
+
+    private  UserRepository userRepository;
 
     @Bean
     UserDetailsService userDetailsService() {
